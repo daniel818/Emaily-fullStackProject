@@ -7,7 +7,8 @@ const app = express();
 
 //Route Handler #1
 app.get("/", (req, res) => {
-  res.send({ hi: "there" });
+  res.send({ bye: "there" });
 });
 
-app.listen(5000);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);
