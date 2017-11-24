@@ -20,6 +20,7 @@ module.exports = app => {
     res.send(req.user);
   });
 
+
   //Route Handler 3
   app.get("/api/current_user", (req, res) => {
     res.send(req.user);
