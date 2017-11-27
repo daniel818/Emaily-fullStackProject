@@ -30,13 +30,11 @@ passport.use(
       const existingUser = await User.findOne({ googleId: profile.id });
 
       if (existingUser) {
-        //Already exist
-        done(null, existingUser);
-      } else {
-        //Not exist so we will create one
-        const user = await new User({ googleId: profile.id }).save();
-        done(null, user);
+        return done(null, existingUser);
       }
+
+      const user = await new User({ googleId: profile.id }).save();
+      done(null, user);
     }
   )
 );

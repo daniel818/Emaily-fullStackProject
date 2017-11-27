@@ -8,7 +8,10 @@ module.exports = app => {
   //Route Handler 1
   app.get(
     "/auth/google",
-    passport.authenticate("google", { scope: ["profile", "email"] })
+    passport.authenticate("google", { scope: ["profile", "email"] }),
+      (req,res) =>{
+      res.redirect("/surveys");
+      }
   );
 
   //Route Handler 2
@@ -21,7 +24,7 @@ module.exports = app => {
   });
 
 
-  //Route Handler 3
+  // Route Handler 3
   app.get("/api/current_user", (req, res) => {
     res.send(req.user);
   });
