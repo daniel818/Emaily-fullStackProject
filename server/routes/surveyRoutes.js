@@ -37,7 +37,6 @@ module.exports = app => {
             choice: match.choice
           };
         }
-        console.log(events);
       })
       .compact()
       .uniqBy("email", "surveyId")
