@@ -6,3 +6,5 @@ A web app that let you send surveys to your customers and get feedback and gathe
 Using Oauth Google login for the users.
 
 Personal project built with React & Redux in the Frontend and with NodeJS,ExpressJS and MongoDb in for the Backend 
+
+also on Heroku : https://safe-harbor-94672.herokuapp.com/
